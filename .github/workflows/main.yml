@@ -22,9 +22,7 @@ jobs:
       - name: Build React-app
         run: npm run build
 
-      - name: Commit build folder
+      - name: Deploy to gh-pages
         run: |
-          git branch -v
-          git remote -v
-          git add -f build
-          git commit -m "Build update"
+          git remote set-url origin https://git:${{secrets.ACCESS_TOKEN}}@github.com/${GITHUB_REPOSITORY}.git
+          npx gh-pages -d build -u "github-actions-bot <support+actions@github.com>"
