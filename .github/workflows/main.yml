@@ -25,7 +25,7 @@ jobs:
       - name: Commit build folder
         run: 
           git add -f build &
-          git commit build -m "Build update" &
+          git commit -m "Build update" &
           git checkout gh-pages
       
       - name: Push build folder to gh-pages branch
