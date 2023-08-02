@@ -23,4 +23,6 @@ jobs:
         run: npm run build
 
       - name: Commit build folder
-        run: git remote -v
+        run: |
+          git branch -v
+          git remote -v
