@@ -23,5 +23,5 @@ jobs:
         run: npm run build
 
       - name: Commit build folder
-        run: git checkout
+        run: git checkout & echo "" & echo git remote -v
       
