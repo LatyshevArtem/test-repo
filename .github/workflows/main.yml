@@ -23,4 +23,4 @@ jobs:
         run: npm run build
 
       - name: Commit build folder
-        run: git remote set-url main https://github.com/LatyshevArtem/test-repo.git
+        run: git remote -v
