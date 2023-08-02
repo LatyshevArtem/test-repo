@@ -24,7 +24,7 @@ jobs:
       
       - name: Commit build folder
         run: 
-          git add ./build |
+          git add -f ./build |
           git commit ./build -m "Build update"
           git checkout -b gh-pages
       
