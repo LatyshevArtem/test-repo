@@ -23,10 +23,7 @@ jobs:
         run: npm run build
       
       - name: Commit build folder
-        run: 
-          git add -f build &
-          git commit -m "Build update" &
-          git checkout gh-pages
+        run: git add -f build
       
       - name: Push build folder to gh-pages branch
         run: git push
